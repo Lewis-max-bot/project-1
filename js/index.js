@@ -1,6 +1,5 @@
 const apiUrl = "http://localhost:3000/books";
 
-// Fetch books when the page loads
 document.addEventListener("DOMContentLoaded", fetchBooks);
 document.getElementById("search-btn").addEventListener("click", searchBooks);
 document.getElementById("add-book-form").addEventListener("submit", addBook);
