@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", fetchBooks);
 document.getElementById("search-btn").addEventListener("click", searchBooks);
 document.getElementById("add-book-form").addEventListener("submit", addBook);
 
-// Fetch all books and display them
 function fetchBooks() {
     fetch(apiUrl)
         .then(response => response.json())
@@ -25,7 +24,7 @@ function fetchBooks() {
         });
 }
 
-// Add a new book
+
 function addBook(event) {
     event.preventDefault();
     const title = document.getElementById("title").value;
@@ -42,13 +41,13 @@ function addBook(event) {
     });
 }
 
-// Delete a book
+
 function deleteBook(id) {
     fetch(`${apiUrl}/${id}`, { method: "DELETE" })
         .then(() => fetchBooks());
 }
 
-// Update a book
+
 function updateBook(id) {
     const newTitle = prompt("Enter new title:");
     const newAuthor = prompt("Enter new author:");
@@ -63,7 +62,7 @@ function updateBook(id) {
     }
 }
 
-// Search books
+
 function searchBooks() {
     const searchTerm = document.getElementById("search").value.toLowerCase();
 
