@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/books";
+const apiUrl = "https://server-nine-omega-53.vercel.app/books";
 
 document.addEventListener("DOMContentLoaded", fetchBooks);
 document.getElementById("search-btn").addEventListener("click", searchBooks);
